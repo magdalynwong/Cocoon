@@ -15,9 +15,9 @@ public class CaterpillarMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GrowBody();
-        GrowBody();
-        GrowBody();
+        //GrowBody();
+        //GrowBody();
+        //GrowBody();
     }
 
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class CaterpillarMovement : MonoBehaviour
         }
     }
 
-    private void GrowBody()
+    public void GrowBody()
     {
         GameObject body = Instantiate(bodyPrefab);
         bodies.Add(body);
