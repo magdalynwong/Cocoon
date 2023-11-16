@@ -6,7 +6,7 @@ public class CaterpillarMovement : MonoBehaviour
 {
 
     public float forwardSpeed = 5;
-    public int gap = 10;
+    public int gap = 20;
     public float steerSpeed = 150;
     public GameObject bodyPrefab;
     private List<GameObject> bodies = new List<GameObject>();
@@ -34,7 +34,7 @@ public class CaterpillarMovement : MonoBehaviour
         posHistory.Insert(0, transform.position);
 
         // move body of caterpillar
-        int index = 0;
+        int index = gap;
         foreach (var body in bodies)
         {
             Vector3 point = posHistory[Mathf.Min(index * gap, posHistory.Count-1)];
@@ -42,7 +42,7 @@ public class CaterpillarMovement : MonoBehaviour
             //Vector3 moveDirection = point - body.transform.position;
             //body.transform.position += moveDirection * forwardSpeed * Time.deltaTime;
             //body.transform.LookAt(point);
-            index++;
+            index+= gap;
         }
     }
 
