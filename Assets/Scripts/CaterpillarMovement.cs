@@ -6,7 +6,7 @@ public class CaterpillarMovement : MonoBehaviour
 {
 
     public float forwardSpeed = 5;
-    public int gap = 20;
+    public int gap = 15;
     public float steerSpeed = 150;
     public GameObject bodyPrefab;
     private List<GameObject> bodies = new List<GameObject>();
