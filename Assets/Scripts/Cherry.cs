@@ -6,6 +6,7 @@ public class Food : MonoBehaviour
 { 
     // Reference to the Food prefab
     public GameObject foodPrefab;
+    public PointsManager pointsManager;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +18,7 @@ public class Food : MonoBehaviour
             
             caterpillarHead.GrowBody();
             SpawnFood();
+            pointsManager.updatePoints(3f);
         }
     }
 
