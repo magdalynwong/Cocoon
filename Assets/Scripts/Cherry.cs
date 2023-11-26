@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Food : MonoBehaviour
-{ 
-    // Reference to the Food prefab
+{
     public GameObject foodPrefab;
     public PointsManager pointsManager;
 
