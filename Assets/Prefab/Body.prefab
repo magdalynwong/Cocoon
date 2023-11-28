@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 9130399085788136951}
   - component: {fileID: 3089207733586852961}
   - component: {fileID: 3368502606328570072}
-  - component: {fileID: 2966995006139446540}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -106,19 +105,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2966995006139446540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7711574184823904599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d56fdffc732b494ab7ed58645a2ba84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forwardSpeed: 5
-  gap: 10
-  steerSpeed: 150
-  bodyPrefab: {fileID: 0}

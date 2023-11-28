@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 70
-  questionMarkPrefab: {fileID: 0}
+  questionMarkPrefab: {fileID: 8462559867183151527}
 --- !u!65 &412835507393802847
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -5,7 +5,14 @@ using UnityEngine;
 public class Food : MonoBehaviour
 {
     public GameObject foodPrefab;
+    public float rotationSpeed = 100.0f;
     public PointsManager pointsManager;
+
+    void Update()
+    {
+        // rotate object around its y axis
+        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
