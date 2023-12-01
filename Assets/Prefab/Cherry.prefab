@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7499566375283841016}
-  - component: {fileID: 2944282131963275175}
-  - component: {fileID: 1125533620560929035}
   m_Layer: 0
   m_Name: Cherry
   m_TagString: Untagged
@@ -27,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1100582066132535059}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.793, y: 1.341, z: -5.854}
+  m_LocalPosition: {x: 2.65, y: 0.859, z: -3.05}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -35,42 +33,6 @@ Transform:
   - {fileID: 7224299795221395557}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &2944282131963275175
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100582066132535059}
-  m_Material: {fileID: 13400000, guid: 969600bb0ff04466b96b9a55da99942c, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.4824134
-  m_Center: {x: 0.0067653656, y: -0.28442514, z: 0.1670897}
---- !u!114 &1125533620560929035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100582066132535059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 491d26d3adfd9499682f4015144af7c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  foodPrefab: {fileID: 1100582066132535059}
-  rotationSpeed: 100
-  pointsManager: {fileID: 0}
 --- !u!1 &6696476121272152549
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,6 +884,7 @@ GameObject:
   - component: {fileID: 1740904488265337907}
   - component: {fileID: 3731441380974971356}
   - component: {fileID: 2465785380123802397}
+  - component: {fileID: 7178779669685315712}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -938,7 +901,7 @@ Transform:
   m_GameObject: {fileID: 8634677035181870773}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.013726234, y: -0.30609816, z: 0.23155785}
+  m_LocalPosition: {x: 0.01, y: -0.30609816, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12572,3 +12535,18 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &7178779669685315712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634677035181870773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 491d26d3adfd9499682f4015144af7c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodPrefab: {fileID: 1100582066132535059}
+  rotationSpeed: 100
+  pointsManager: {fileID: 0}

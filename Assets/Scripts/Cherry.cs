@@ -22,7 +22,8 @@ public class Food : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-         // Destroy boxes that are hit by an explosion
+
+        // add to caterpillar body
         CaterpillarMovement caterpillarHead = other.gameObject.GetComponent<CaterpillarMovement>();
         if (caterpillarHead != null)
         {
