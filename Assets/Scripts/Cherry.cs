@@ -2,14 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Food : MonoBehaviour
+public class Cherry : MonoBehaviour
 {
     public GameObject foodPrefab;
     public float rotationSpeed = 100.0f;
     public PointsManager pointsManager;
     public AudioClip crunchSound;
 
-    
+    void Update()
+    {
+        // rotate object around its y axis
+        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
 
@@ -18,13 +24,14 @@ public class Food : MonoBehaviour
         if (caterpillarHead != null)
         {
             // play crunch sound effect
-            AudioSource.PlayClipAtPoint(crunchSound, transform.position);         
+            AudioSource.PlayClipAtPoint(crunchSound, transform.position);
 
             Destroy(gameObject);
 
             caterpillarHead.GrowBody();
+            caterpillarHead.GrowBody();
             SpawnFood();
-            pointsManager.updatePoints(3f);
+            pointsManager.updatePoints(2f);
         }
     }
 

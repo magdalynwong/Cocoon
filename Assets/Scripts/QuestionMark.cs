@@ -9,11 +9,6 @@ public class QuestionMark : MonoBehaviour
     public GameObject questionMarkPrefab;
     public PointsManager pointsManager;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         // rotate object around its y axis
@@ -40,7 +35,7 @@ public class QuestionMark : MonoBehaviour
                 caterpillarHead.GrowBody();
             }
 
-            pointsManager.updatePoints(3f * numberOfTimesToGrow);
+            pointsManager.updatePoints(2f * numberOfTimesToGrow);
 
             
         }
