@@ -11,7 +11,7 @@ public class QuestionMark : MonoBehaviour
 
     void Start()
     {
-
+        
     }
 
     void Update()
@@ -30,8 +30,10 @@ public class QuestionMark : MonoBehaviour
             //AudioSource.PlayClipAtPoint(crunchSound, transform.position);
 
             Destroy(gameObject);
+            //// spawn question mark every 5 seconds
+            //StartCoroutine(SpawnQuestionMark(1));
 
-            int numberOfTimesToGrow = Random.Range(3, 6); // Generates a random number between 3 and 5 (exclusive)
+            int numberOfTimesToGrow = Random.Range(3, 7); 
 
             for (int i = 0; i < numberOfTimesToGrow; i++)
             {
@@ -39,13 +41,21 @@ public class QuestionMark : MonoBehaviour
             }
 
             pointsManager.updatePoints(3f * numberOfTimesToGrow);
-        }
-    }
 
-private void SpawnQuestionMark()
+            
+        }
+        
+    }
+ 
+
+    IEnumerator SpawnQuestionMark(float delay)
     {
+        
+        // wait for the specified delay
+        yield return new WaitForSeconds(delay);
+        print("h");
         GameObject questionMark = Instantiate(questionMarkPrefab);
         // random position of the new object
-        questionMark.transform.position = new Vector3(Random.Range(-10f, 10f), 0.5f, Random.Range(-10f, 10f));
+        questionMark.transform.position = new Vector3(Random.Range(-14f, 22f), 0.6f, Random.Range(-16f, 16f));
     }
 }

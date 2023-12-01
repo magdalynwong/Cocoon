@@ -5,9 +5,9 @@ using UnityEngine;
 public class CaterpillarMovement : MonoBehaviour
 {
 
-    public float forwardSpeed = 5;
-    public int gap = 15;
-    public float steerSpeed = 150;
+    public float forwardSpeed = 8;
+    public int gap = 10;
+    public float steerSpeed = 200;
     public GameObject bodyPrefab;
     private List<GameObject> bodies = new List<GameObject>();
     private List<Vector3> posHistory = new List<Vector3>();
