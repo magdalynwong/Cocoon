@@ -7,19 +7,9 @@ public class Food : MonoBehaviour
     public GameObject foodPrefab;
     public float rotationSpeed = 100.0f;
     public PointsManager pointsManager;
-    public AudioSource audioSource;
+    public AudioClip crunchSound;
 
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
-
-    void Update()
-    {
-        // rotate object around its y axis
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-    }
-
+    
     private void OnTriggerEnter(Collider other)
     {
 
@@ -27,13 +17,8 @@ public class Food : MonoBehaviour
         CaterpillarMovement caterpillarHead = other.gameObject.GetComponent<CaterpillarMovement>();
         if (caterpillarHead != null)
         {
-            
-
-            // play sound
-            if (audioSource != null)
-            {
-                AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
-            }
+            // play crunch sound effect
+            AudioSource.PlayClipAtPoint(crunchSound, transform.position);         
 
             Destroy(gameObject);
 

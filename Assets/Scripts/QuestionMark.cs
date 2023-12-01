@@ -7,6 +7,7 @@ public class QuestionMark : MonoBehaviour
     // rotation speed in degrees/second
     public float rotationSpeed = 100.0f;
     public GameObject questionMarkPrefab;
+    public PointsManager pointsManager;
 
     void Start()
     {
@@ -19,7 +20,29 @@ public class QuestionMark : MonoBehaviour
         transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
     }
 
-    private void SpawnQuestionMark()
+    private void OnTriggerEnter(Collider other)
+    {
+        // add to caterpillar body
+        CaterpillarMovement caterpillarHead = other.gameObject.GetComponent<CaterpillarMovement>();
+        if (caterpillarHead != null)
+        {
+            // play power up sound effect
+            //AudioSource.PlayClipAtPoint(crunchSound, transform.position);
+
+            Destroy(gameObject);
+
+            int numberOfTimesToGrow = Random.Range(3, 6); // Generates a random number between 3 and 5 (exclusive)
+
+            for (int i = 0; i < numberOfTimesToGrow; i++)
+            {
+                caterpillarHead.GrowBody();
+            }
+
+            pointsManager.updatePoints(3f * numberOfTimesToGrow);
+        }
+    }
+
+private void SpawnQuestionMark()
     {
         GameObject questionMark = Instantiate(questionMarkPrefab);
         // random position of the new object
