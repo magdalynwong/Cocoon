@@ -7,6 +7,12 @@ public class Food : MonoBehaviour
     public GameObject foodPrefab;
     public float rotationSpeed = 100.0f;
     public PointsManager pointsManager;
+    public AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -20,8 +26,16 @@ public class Food : MonoBehaviour
         CaterpillarMovement caterpillarHead = other.gameObject.GetComponent<CaterpillarMovement>();
         if (caterpillarHead != null)
         {
-            Destroy(gameObject);
             
+
+            // play sound
+            if (audioSource != null)
+            {
+                AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
+            }
+
+            Destroy(gameObject);
+
             caterpillarHead.GrowBody();
             SpawnFood();
             pointsManager.updatePoints(3f);
