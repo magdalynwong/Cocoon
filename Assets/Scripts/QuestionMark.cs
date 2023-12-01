@@ -8,6 +8,7 @@ public class QuestionMark : MonoBehaviour
     public float rotationSpeed = 100.0f;
     public GameObject questionMarkPrefab;
     public PointsManager pointsManager;
+    public AudioClip powerupSound;
 
     void Update()
     {
@@ -22,7 +23,7 @@ public class QuestionMark : MonoBehaviour
         if (caterpillarHead != null)
         {
             // play power up sound effect
-            //AudioSource.PlayClipAtPoint(crunchSound, transform.position);
+            AudioSource.PlayClipAtPoint(powerupSound, transform.position);
 
             Destroy(gameObject);
             //// spawn question mark every 5 seconds
@@ -51,6 +52,6 @@ public class QuestionMark : MonoBehaviour
         print("h");
         GameObject questionMark = Instantiate(questionMarkPrefab);
         // random position of the new object
-        questionMark.transform.position = new Vector3(Random.Range(-14f, 22f), 0.6f, Random.Range(-16f, 16f));
+        questionMark.transform.position = new Vector3(Random.Range(-14f, 22f), 1f, Random.Range(-16f, 16f));
     }
 }

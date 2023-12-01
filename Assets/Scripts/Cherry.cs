@@ -40,6 +40,6 @@ public class Cherry : MonoBehaviour
         GameObject newFood = Instantiate(foodPrefab);
 
         // random position of the new food object
-        newFood.transform.position = new Vector3(Random.Range(-10f, 10f), 0.5f, Random.Range(-10f, 10f));
+        newFood.transform.position = new Vector3(Random.Range(-10f, 10f), 1.4f, Random.Range(-10f, 10f));
     }
 }
