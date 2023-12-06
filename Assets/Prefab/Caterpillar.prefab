@@ -223,7 +223,6 @@ GameObject:
   - component: {fileID: 7495971433576140453}
   - component: {fileID: 6572883460691736374}
   - component: {fileID: 6502563043770762}
-  - component: {fileID: 7156928588655914080}
   m_Layer: 0
   m_Name: Caterpillar
   m_TagString: Untagged
@@ -333,42 +332,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d56fdffc732b494ab7ed58645a2ba84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 8
-  gap: 15
-  steerSpeed: 200
-  bodyPrefab: {fileID: 7711574184823904599, guid: 464a0e88a4afa40ebabfc672a58b8859, type: 3}
-  pauseText: {fileID: 0}
-  gamePoints: {fileID: 0}
-  pointsManager: {fileID: 0}
-  playAgainButton: {fileID: 0}
-  mainMenuButton: {fileID: 0}
---- !u!54 &7156928588655914080
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4379110845025891004}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  forwardSpeed: 5
+  gap: 10
+  steerSpeed: 150
+  bodyPrefab: {fileID: 0}
 --- !u!1 &6902860136949802520
 GameObject:
   m_ObjectHideFlags: 0
