@@ -48,9 +48,8 @@ public class GameOver : MonoBehaviour
 
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
-
     }
-
+    
     public void GoToMainMenu()
     {
         // Unpause the game

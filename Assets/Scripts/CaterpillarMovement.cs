@@ -15,17 +15,9 @@ public class CaterpillarMovement : MonoBehaviour
     private bool isFalling = false;
     public TMP_Text pauseText;
     public TMP_Text gamePoints;
-    public PointsManager pointsManager; // Reference to PointsManager
+    public PointsManager pointsManager; 
     public Button playAgainButton;
     public Button mainMenuButton;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //GrowBody();
-        //GrowBody();
-        //GrowBody();
-    }
 
     // Update is called once per frame
     void Update()
@@ -57,21 +49,7 @@ public class CaterpillarMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("TransparentPlatform"))
         {
-            isFalling = true;
-            Time.timeScale = 0f;  // Pause the game
-
-            // Show the game over message with obtained points
-            float currentPoints = pointsManager.getCurrentScore();
-            pauseText.text = "Game Over! \nObtained Points: " + currentPoints;
-
-            // Show the pause text
-            pauseText.gameObject.SetActive(true);
-            // Remove the points text
-            gamePoints.gameObject.SetActive(false);
-
-            // Show the buttons
-            playAgainButton.gameObject.SetActive(true);
-            mainMenuButton.gameObject.SetActive(true);
+            EndGame();
         }
     }
 
@@ -79,5 +57,25 @@ public class CaterpillarMovement : MonoBehaviour
     {
         GameObject body = Instantiate(bodyPrefab);
         bodies.Add(body);
+    }
+
+
+    public void EndGame()
+    {
+        isFalling = true;
+        Time.timeScale = 0f;  // Pause the game
+
+        // Show the game over message with obtained points
+        float currentPoints = pointsManager.getCurrentScore();
+        pauseText.text = "Game Over! \nObtained Points: " + currentPoints;
+
+        // Show the pause text
+        pauseText.gameObject.SetActive(true);
+        // Remove the points text
+        gamePoints.gameObject.SetActive(false);
+
+        // Show the buttons
+        playAgainButton.gameObject.SetActive(true);
+        mainMenuButton.gameObject.SetActive(true);
     }
 }
