@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -18,5 +16,20 @@ public class PointsManager : MonoBehaviour
         score += pointsToIncrement;
         points.text = "Points: " + score;
     }
-}
 
+    public float getCurrentScore()
+    {
+        return score;
+    }
+
+    private void UpdatePointsText()
+    {
+        points.text = "Points: " + score;
+    }
+
+    public void ResetPoints()
+    {
+        score = 0;
+        UpdatePointsText();
+    }
+}
