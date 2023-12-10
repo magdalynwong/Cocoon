@@ -9,12 +9,14 @@ public class GameOver : MonoBehaviour
     public float moveSpeed = 2.0f;
     public Button playAgainButton;
     public Button mainMenuButton;
+    public Button backgroundEnd;
     public PointsManager pointsManager;
 
     void Start()
     {
         // Disable the text initially
         pauseMessage.gameObject.SetActive(false);
+        backgroundEnd.gameObject.SetActive(false);
         playAgainButton.onClick.AddListener(PlayAgain);
         mainMenuButton.onClick.AddListener(GoToMainMenu);
     }
@@ -26,6 +28,7 @@ public class GameOver : MonoBehaviour
         {
             // Show the text
             pauseMessage.gameObject.SetActive(true);
+            backgroundEnd.gameObject.SetActive(true);
 
             // Move the text down
             Vector3 targetPosition = transform.position - Vector3.up * moveSpeed * Time.deltaTime;

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CloudMovement : MonoBehaviour
 {
     public float moveSpeed = 10.0f;
-    public float moveDistance = 20.0f;
+    public float moveDistance = 25.0f;
 
     void OnEnable()
     {

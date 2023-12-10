@@ -6,7 +6,7 @@ using UnityEngine;
 public class CloudsLeft : MonoBehaviour
 {
     public float moveSpeed = 10.0f;
-    public float moveDistance = 20.0f;
+    public float moveDistance = 30.0f;
 
     void OnEnable()
     {
