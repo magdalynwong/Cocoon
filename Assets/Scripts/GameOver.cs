@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public TMP_Text pauseMessage;
-    public float moveSpeed = 2.0f;
     public Button playAgainButton;
     public Button mainMenuButton;
     public Button backgroundEnd;
@@ -14,7 +13,7 @@ public class GameOver : MonoBehaviour
 
     void Start()
     {
-        // Disable the text initially
+        // disable the text initially
         pauseMessage.gameObject.SetActive(false);
         backgroundEnd.gameObject.SetActive(false);
         playAgainButton.onClick.AddListener(PlayAgain);
@@ -23,16 +22,12 @@ public class GameOver : MonoBehaviour
 
     void Update()
     {
-        // Check if the game is paused
+        // check if the game is paused
         if (Time.timeScale == 0f)
         {
-            // Show the text
+            // show the text
             pauseMessage.gameObject.SetActive(true);
             backgroundEnd.gameObject.SetActive(true);
-
-            // Move the text down
-            Vector3 targetPosition = transform.position - Vector3.up * moveSpeed * Time.deltaTime;
-            transform.position = Vector3.Lerp(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }
         else
         {
@@ -43,10 +38,10 @@ public class GameOver : MonoBehaviour
 
     public void PlayAgain()
     {
-        // Reload the current scene
+        // reload the current scene
         Time.timeScale = 1f;
 
-        // Reload the current scene
+        // reload the current scene
         pointsManager.ResetPoints();
 
         Scene currentScene = SceneManager.GetActiveScene();
@@ -55,11 +50,11 @@ public class GameOver : MonoBehaviour
     
     public void GoToMainMenu()
     {
-        // Unpause the game
+        // unpause the game
         Time.timeScale = 1f;
         pointsManager.ResetPoints();
 
-        // Load the main menu scene
-        SceneManager.LoadScene("Intro"); 
+        // load the main menu scene
+        SceneManager.LoadScene("NewIntro"); 
     }
 }

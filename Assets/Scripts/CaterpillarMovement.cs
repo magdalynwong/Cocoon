@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -19,7 +18,6 @@ public class CaterpillarMovement : MonoBehaviour
     public Button playAgainButton;
     public Button mainMenuButton;
 
-    // Update is called once per frame
     void Update()
     {
         if (!isFalling)
@@ -63,18 +61,18 @@ public class CaterpillarMovement : MonoBehaviour
     public void EndGame()
     {
         isFalling = true;
-        Time.timeScale = 0f;  // Pause the game
+        Time.timeScale = 0f;  // pause game
 
-        // Show the game over message with obtained points
+        // show game over message with total points obtained
         float currentPoints = pointsManager.getCurrentScore();
-        pauseText.text = "GAME OVER! \nObtained Points: " + currentPoints;
+        pauseText.text = "GAME OVER! \nPoints: " + currentPoints;
 
-        // Show the pause text
+        // show the pause text
         pauseText.gameObject.SetActive(true);
-        // Remove the points text
+        // remove the points text
         gamePoints.gameObject.SetActive(false);
 
-        // Show the buttons
+        // show the buttons
         playAgainButton.gameObject.SetActive(true);
         mainMenuButton.gameObject.SetActive(true);
     }
