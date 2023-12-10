@@ -36,7 +36,7 @@ public class PowerUp : MonoBehaviour
             {
                 caterpillarHead.GrowBody();
             }
-            caterpillarHead.forwardSpeed += 2f;
+            caterpillarHead.forwardSpeed += 1f;
 
             pointsManager.updatePoints(2f * numberOfTimesToGrow);
             spawnManager.StartSpawnRoutine(5);
