@@ -31,7 +31,7 @@ public class GameOver : MonoBehaviour
         }
         else
         {
-            // Hide the text when the game is not paused
+            // hide the text when the game is not paused
             pauseMessage.gameObject.SetActive(false);
         }
     }
@@ -55,6 +55,6 @@ public class GameOver : MonoBehaviour
         pointsManager.ResetPoints();
 
         // load the main menu scene
-        SceneManager.LoadScene("NewIntro"); 
+        SceneManager.LoadScene("Start"); 
     }
 }
