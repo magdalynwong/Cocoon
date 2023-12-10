@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 491d26d3adfd9499682f4015144af7c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodPrefab: {fileID: 1100582066132535059}
+  cherryPrefab: {fileID: 1100582066132535059}
   rotationSpeed: 100
   pointsManager: {fileID: 0}
   crunchSound: {fileID: 8300000, guid: 6a4f993b3f6614214b9a5363ea89ad62, type: 3}
