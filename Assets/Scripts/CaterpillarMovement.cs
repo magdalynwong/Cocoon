@@ -67,7 +67,7 @@ public class CaterpillarMovement : MonoBehaviour
 
         // Show the game over message with obtained points
         float currentPoints = pointsManager.getCurrentScore();
-        pauseText.text = "Game Over! \nObtained Points: " + currentPoints;
+        pauseText.text = "GAME OVER! \nObtained Points: " + currentPoints;
 
         // Show the pause text
         pauseText.gameObject.SetActive(true);
