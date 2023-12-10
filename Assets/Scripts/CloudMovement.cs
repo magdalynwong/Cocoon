@@ -1,4 +1,3 @@
-// CloudMovement.cs
 using System.Collections;
 using UnityEngine;
 
@@ -25,7 +24,7 @@ public class CloudMovement : MonoBehaviour
             yield return null;
         }
 
-        // Disable the cloud object after moving
+        // disable the cloud object after moving
         gameObject.SetActive(false);
     }
 }

@@ -1,5 +1,3 @@
-
-// CloudMovement.cs
 using System.Collections;
 using UnityEngine;
 
