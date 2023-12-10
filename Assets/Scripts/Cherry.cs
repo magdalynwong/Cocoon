@@ -4,42 +4,33 @@ using UnityEngine;
 
 public class Cherry : MonoBehaviour
 {
-    public GameObject foodPrefab;
+    public GameObject cherryPrefab;
     public float rotationSpeed = 100.0f;
     public PointsManager pointsManager;
     public AudioClip crunchSound;
 
-    void Update()
-    {
-        // rotate object around its y axis
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-    }
-
-
     private void OnTriggerEnter(Collider other)
     {
-
-        // add to caterpillar body
         CaterpillarMovement caterpillarHead = other.gameObject.GetComponent<CaterpillarMovement>();
         if (caterpillarHead != null)
         {
             // play crunch sound effect
-            AudioSource.PlayClipAtPoint(crunchSound, transform.position);
-
+            AudioSource.PlayClipAtPoint(crunchSound, 0.8f * Camera.main.transform.position, 10f);
             Destroy(gameObject);
 
+            // add to caterpillar body, spawn new cherry
             caterpillarHead.GrowBody();
             caterpillarHead.GrowBody();
-            SpawnFood();
+            SpawnCherry();
             pointsManager.updatePoints(2f);
         }
     }
 
-    private void SpawnFood()
+    private void SpawnCherry()
     {
-        GameObject newFood = Instantiate(foodPrefab);
+        GameObject newCherry = Instantiate(cherryPrefab);
 
-        // random position of the new food object
-        newFood.transform.position = new Vector3(Random.Range(-10f, 10f), 1.4f, Random.Range(-10f, 10f));
+        // random position of the new cherry object
+        newCherry.transform.position = new Vector3(Random.Range(-10f, 20f), 1.4f, Random.Range(-13f, 13f));
     }
 }

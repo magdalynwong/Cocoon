@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class CaterpillarBody : MonoBehaviour
 {
-
     public PointsManager pointsManager;
     public TMP_Text pauseText;
     public TMP_Text gamePoints;

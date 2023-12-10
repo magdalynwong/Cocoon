@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 1100582066132535059}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.65, y: 1, z: -1.82}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalPosition: {x: 2.65, y: 1.45, z: -1.82}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3361838781712779956}
@@ -52,7 +52,7 @@ MonoBehaviour:
   foodPrefab: {fileID: 1100582066132535059}
   rotationSpeed: 100
   pointsManager: {fileID: 0}
-  crunchSound: {fileID: 8300000, guid: dbfc639327dc54bceb54ad2d53434a49, type: 3}
+  crunchSound: {fileID: 8300000, guid: 6a4f993b3f6614214b9a5363ea89ad62, type: 3}
 --- !u!136 &4030737116088443658
 CapsuleCollider:
   m_ObjectHideFlags: 0
