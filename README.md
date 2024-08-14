@@ -8,8 +8,5 @@ Collectibles include cherries and a power-up. Each cherry will earn the player 2
 The game is designed to be intuitive, allowing users to understand the mechanics by themselves because of the simplicity of the design. The visual design is kept rather simple and is meant to invoke a sense of nostalgia for earlier games. The font and music that we chose echo this sentiment. The game ends with an end scene that allows the player to either play again or return to the home screen. 
 
 
-## Files & functions
-The file `realm_page.js` renders the page for a specific realm and its posts. 
-
 
 
